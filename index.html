@@ -41,15 +41,15 @@
 
     .slice span {
       position: absolute;
-      top: 85%; /* Сдвигаем текст к внешнему краю слайса */
-      left: 50%;
-      transform: translateX(-50%) rotate(calc(var(--angle) * -1)); /* Позиционирование текста */
-      font-size: 20px;
+      top: 50%; /* Центрируем текст по вертикали */
+      left: 50%; /* Центрируем текст по горизонтали */
+      transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1)); /* Позиционирование текста */
+      font-size: 16px;
       font-weight: bold;
       color: white;
-      text-shadow: 0 0 5px black; /* Увеличена тень для улучшения читаемости */
-      white-space: nowrap;
+      text-shadow: 0 0 3px black;
       text-align: center;
+      white-space: nowrap;
     }
 
     /* Уникальные цвета и углы сегментов */
