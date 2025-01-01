@@ -41,13 +41,14 @@
 
     .slice span {
       position: absolute;
-      top: 75%; /* Сдвинул текст ближе к внешней дуге */
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%) rotate(calc(var(--angle) * -1));
+      top: 50%; /* Центрируем текст по вертикали */
+      left: 50%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1));
       font-size: 14px;
       font-weight: bold;
       color: white;
       text-shadow: 0 0 3px black;
+      writing-mode: vertical-rl;
       text-align: center;
     }
 
@@ -88,7 +89,7 @@
       --angle: 292.5deg;
     }
     .slice:nth-child(8) {
-      background-color: #becd32; /* Новый уникальный цвет */
+      background-color: #becd32;
       transform: rotate(315deg);
       --angle: 337.5deg;
     }
