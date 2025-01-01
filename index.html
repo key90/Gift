@@ -41,9 +41,9 @@
 
     .slice span {
       position: absolute;
-      top: 75%; /* Позиционирование текста ближе к внешнему краю */
+      top: 50%; /* Позиционирование текста в центре слайса */
       left: 50%;
-      transform: translateX(-50%) rotate(calc(var(--angle) * -1)); /* Позиционирование текста */
+      transform: translateX(-50%) translateY(-50%) rotate(calc(var(--angle) * -1)); /* Позиционирование текста */
       font-size: 14px;
       font-weight: bold;
       color: white;
