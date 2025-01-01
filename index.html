@@ -14,6 +14,10 @@
       background-color: #f0f0f0;
     }
 
+    .wheel-container {
+      position: relative;
+    }
+
     .wheel {
       width: 300px;
       height: 300px;
@@ -31,17 +35,16 @@
       clip-path: polygon(50% 50%, 100% 0, 100% 100%);
       transform-origin: 50% 50%;
       display: flex;
-      justify-content: flex-start;
+      justify-content: flex-end;
       align-items: center;
-      padding-left: 20px;
+      padding-right: 20px;
     }
 
     .slice span {
       transform: rotate(calc(-1 * var(--angle, 0deg)));
-      color: white;
       font-size: 14px;
       font-weight: bold;
-      text-align: left;
+      text-align: right;
       width: 100px;
     }
 
@@ -50,11 +53,17 @@
       transform: rotate(0deg);
       --angle: 0deg;
     }
+    .slice:nth-child(1) span {
+      color: #ffffff;
+    }
 
     .slice:nth-child(2) {
       background-color: #9acd32;
       transform: rotate(45deg);
       --angle: 45deg;
+    }
+    .slice:nth-child(2) span {
+      color: #000000;
     }
 
     .slice:nth-child(3) {
@@ -62,11 +71,17 @@
       transform: rotate(90deg);
       --angle: 90deg;
     }
+    .slice:nth-child(3) span {
+      color: #ffffff;
+    }
 
     .slice:nth-child(4) {
       background-color: #ff8c00;
       transform: rotate(135deg);
       --angle: 135deg;
+    }
+    .slice:nth-child(4) span {
+      color: #000000;
     }
 
     .slice:nth-child(5) {
@@ -74,11 +89,17 @@
       transform: rotate(180deg);
       --angle: 180deg;
     }
+    .slice:nth-child(5) span {
+      color: #ffffff;
+    }
 
     .slice:nth-child(6) {
       background-color: #dc143c;
       transform: rotate(225deg);
       --angle: 225deg;
+    }
+    .slice:nth-child(6) span {
+      color: #ffffff;
     }
 
     .slice:nth-child(7) {
@@ -86,17 +107,22 @@
       transform: rotate(270deg);
       --angle: 270deg;
     }
+    .slice:nth-child(7) span {
+      color: #ffffff;
+    }
 
     .slice:nth-child(8) {
       background-color: #ff1493;
       transform: rotate(315deg);
       --angle: 315deg;
     }
+    .slice:nth-child(8) span {
+      color: #000000;
+    }
 
-    /* Белая стрелка */
     .arrow {
       position: absolute;
-      top: 0;
+      top: -30px;
       left: 50%;
       transform: translateX(-50%);
       width: 0;
@@ -126,17 +152,19 @@
   </style>
 </head>
 <body>
-  <div class="wheel" onclick="startSpinning()">
+  <div class="wheel-container">
     <div class="arrow"></div>
-    <div class="slice"><span>Торт</span></div>
-    <div class="slice"><span>Фен-щетка</span></div>
-    <div class="slice"><span>Лонгслив</span></div>
-    <div class="slice"><span>Сэндвич</span></div>
-    <div class="slice"><span>СПА</span></div>
-    <div class="slice"><span>Массажер</span></div>
-    <div class="slice"><span>Патефон</span></div>
-    <div class="slice"><span>Сумка</span></div>
-    <div class="center-text">Нажми!</div>
+    <div class="wheel" onclick="startSpinning()">
+      <div class="slice"><span>Торт</span></div>
+      <div class="slice"><span>Фен-щетка</span></div>
+      <div class="slice"><span>Лонгслив</span></div>
+      <div class="slice"><span>Сэндвич</span></div>
+      <div class="slice"><span>СПА</span></div>
+      <div class="slice"><span>Массажер</span></div>
+      <div class="slice"><span>Патефон</span></div>
+      <div class="slice"><span>Сумка</span></div>
+      <div class="center-text">Нажми!</div>
+    </div>
   </div>
 
   <script>
