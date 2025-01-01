@@ -41,9 +41,9 @@
 
     .slice span {
       position: absolute;
-      top: 50%; /* Центрируем текст по вертикали */
+      bottom: -40px; /* Сдвигаем текст ниже, чтобы он был на внешней дуге */
       left: 50%; /* Центрируем по горизонтали */
-      transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1));
+      transform: translateX(-50%) rotate(calc(var(--angle) * -1)); /* Поворот текста по дуге */
       font-size: 14px;
       font-weight: bold;
       color: white;
