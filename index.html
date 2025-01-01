@@ -35,13 +35,15 @@
       clip-path: polygon(50% 50%, 100% 0, 100% 100%);
       transform-origin: 50% 50%;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
       align-items: center;
-      padding-right: 10px;
+      padding-left: 10px;
     }
 
     .slice span {
-      transform: rotate(calc(-1 * var(--angle, 0deg)));
+      position: absolute;
+      transform: rotate(calc(var(--angle) * -1)) translate(-50%, -50%);
+      transform-origin: center center;
       writing-mode: vertical-rl;
       font-size: 14px;
       font-weight: bold;
