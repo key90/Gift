@@ -34,97 +34,65 @@
       height: 100%;
       clip-path: polygon(50% 50%, 100% 0, 100% 100%);
       transform-origin: 50% 50%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding-left: 10px;
     }
 
     .slice span {
       position: absolute;
-      transform: rotate(calc(var(--angle) * -1)) translate(-50%, -50%);
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1));
       transform-origin: center center;
-      writing-mode: vertical-rl;
       font-size: 14px;
       font-weight: bold;
       text-align: center;
+      color: white;
+      writing-mode: vertical-rl;
     }
 
     .slice:nth-child(1) {
       background-color: #ff6f61;
       transform: rotate(0deg);
-      --angle: 0deg;
+      --angle: 22.5deg;
     }
-    .slice:nth-child(1) span {
-      color: #ffffff;
-    }
-
     .slice:nth-child(2) {
       background-color: #9acd32;
       transform: rotate(45deg);
-      --angle: 45deg;
+      --angle: 67.5deg;
     }
-    .slice:nth-child(2) span {
-      color: #000000;
-    }
-
     .slice:nth-child(3) {
       background-color: #6495ed;
       transform: rotate(90deg);
-      --angle: 90deg;
+      --angle: 112.5deg;
     }
-    .slice:nth-child(3) span {
-      color: #ffffff;
-    }
-
     .slice:nth-child(4) {
       background-color: #ff8c00;
       transform: rotate(135deg);
-      --angle: 135deg;
+      --angle: 157.5deg;
     }
-    .slice:nth-child(4) span {
-      color: #000000;
-    }
-
     .slice:nth-child(5) {
       background-color: #3cb371;
       transform: rotate(180deg);
-      --angle: 180deg;
+      --angle: 202.5deg;
     }
-    .slice:nth-child(5) span {
-      color: #ffffff;
-    }
-
     .slice:nth-child(6) {
       background-color: #dc143c;
       transform: rotate(225deg);
-      --angle: 225deg;
+      --angle: 247.5deg;
     }
-    .slice:nth-child(6) span {
-      color: #ffffff;
-    }
-
     .slice:nth-child(7) {
       background-color: #4b0082;
       transform: rotate(270deg);
-      --angle: 270deg;
+      --angle: 292.5deg;
     }
-    .slice:nth-child(7) span {
-      color: #ffffff;
-    }
-
     .slice:nth-child(8) {
       background-color: #ff1493;
       transform: rotate(315deg);
-      --angle: 315deg;
-    }
-    .slice:nth-child(8) span {
-      color: #000000;
+      --angle: 337.5deg;
     }
 
     .arrow {
       position: absolute;
-      top: -30px;
+      top: -40px;
       left: 50%;
       transform: translateX(-50%);
       width: 0;
