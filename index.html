@@ -41,13 +41,15 @@
 
     .slice span {
       position: absolute;
-      top: 50%;
+      top: 90%; /* Разместим текст ближе к внешней дуге */
       left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      font-size: 16px;
+      transform: translateX(-50%) rotate(calc(var(--angle) * -1)) translateY(-40px);
+      font-size: 14px;
       font-weight: bold;
       color: white;
       text-shadow: 0 0 3px black;
+      text-align: center;
+      writing-mode: vertical-rl;
     }
 
     /* Уникальные цвета и углы сегментов */
