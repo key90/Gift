@@ -40,12 +40,15 @@
     }
 
     .slice span {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) rotate(calc(var(--angle) * -1));
       font-size: 14px;
       font-weight: bold;
       color: white;
       writing-mode: vertical-rl;
       text-shadow: 0 0 3px black;
-      transform: translateY(-50%) rotate(calc(var(--angle) * -1));
     }
 
     /* Уникальные цвета и углы сегментов */
