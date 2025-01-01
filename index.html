@@ -34,28 +34,31 @@
       height: 100%;
       clip-path: polygon(50% 50%, 100% 0, 100% 100%);
       transform-origin: 50% 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .slice span {
       position: absolute;
-      top: 50%;
-      left: 95%;
-      transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1));
-      transform-origin: 0 0;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%) rotate(calc(var(--angle) * -1));
       font-size: 14px;
       font-weight: bold;
       color: white;
       text-shadow: 0 0 3px black;
+      writing-mode: vertical-rl;
     }
 
-    /* Цвета и углы сегментов */
+    /* Уникальные цвета и углы сегментов */
     .slice:nth-child(1) {
       background-color: #ff6f61;
       transform: rotate(0deg);
       --angle: 22.5deg;
     }
     .slice:nth-child(2) {
-      background-color: #9acd32;
+      background-color: #32cd32;
       transform: rotate(45deg);
       --angle: 67.5deg;
     }
@@ -65,7 +68,7 @@
       --angle: 112.5deg;
     }
     .slice:nth-child(4) {
-      background-color: #ff8c00;
+      background-color: #ffa500;
       transform: rotate(135deg);
       --angle: 157.5deg;
     }
