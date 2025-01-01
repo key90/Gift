@@ -41,15 +41,14 @@
 
     .slice span {
       position: absolute;
-      bottom: -20px; /* Сдвиг текста ближе к дуге */
-      left: 50%; /* Центрируем по горизонтали */
-      transform: translateX(-50%) rotate(calc(var(--angle) * -1)); /* Поворот текста по дуге */
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(calc(var(--angle) * -1)); /* Вертикальный текст */
       font-size: 14px;
       font-weight: bold;
       color: white;
       text-shadow: 0 0 3px black;
       writing-mode: vertical-rl;
-      transform: rotate(calc(var(--angle) * -1)) translateX(-50%) rotate(-30deg); /* Полубоком */
     }
 
     /* Уникальные цвета и углы сегментов */
