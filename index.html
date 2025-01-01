@@ -41,7 +41,7 @@
 
     .slice span {
       position: absolute;
-      bottom: -40px; /* Сдвигаем текст ниже, чтобы он был на внешней дуге */
+      bottom: -20px; /* Сдвиг текста ближе к дуге */
       left: 50%; /* Центрируем по горизонтали */
       transform: translateX(-50%) rotate(calc(var(--angle) * -1)); /* Поворот текста по дуге */
       font-size: 14px;
@@ -49,7 +49,7 @@
       color: white;
       text-shadow: 0 0 3px black;
       writing-mode: vertical-rl;
-      text-align: center;
+      transform: rotate(calc(var(--angle) * -1)) translateX(-50%) rotate(-30deg); /* Полубоком */
     }
 
     /* Уникальные цвета и углы сегментов */
