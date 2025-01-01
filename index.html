@@ -41,9 +41,9 @@
 
     .slice span {
       position: absolute;
-      top: 50%; /* Вернул в центр */
+      top: 75%; /* Сдвинул текст ближе к внешней дуге */
       left: 50%;
-      transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%) rotate(calc(var(--angle) * -1));
       font-size: 14px;
       font-weight: bold;
       color: white;
