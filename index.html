@@ -47,8 +47,8 @@
       font-size: 14px;
       font-weight: bold;
       color: white;
-      text-shadow: 0 0 3px black;
       writing-mode: vertical-rl;
+      text-shadow: 0 0 3px black;
     }
 
     /* Уникальные цвета и углы сегментов */
@@ -88,7 +88,7 @@
       --angle: 292.5deg;
     }
     .slice:nth-child(8) {
-      background-color: #ff1493;
+      background-color: #00ced1; /* Новый уникальный цвет */
       transform: rotate(315deg);
       --angle: 337.5deg;
     }
@@ -96,7 +96,7 @@
     .arrow {
       position: absolute;
       top: -40px;
-      left: 48%;
+      left: calc(50% - 15px); /* Сдвиг на ширину стрелки */
       transform: translateX(-50%);
       width: 0;
       height: 0;
