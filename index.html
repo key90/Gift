@@ -35,17 +35,17 @@
       clip-path: polygon(50% 50%, 100% 0, 100% 100%);
       transform-origin: 50% 50%;
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding-right: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 15px;
     }
 
     .slice span {
       transform: rotate(calc(-1 * var(--angle, 0deg)));
+      writing-mode: vertical-rl;
       font-size: 14px;
       font-weight: bold;
-      text-align: right;
-      width: 100px;
+      text-align: center;
     }
 
     .slice:nth-child(1) {
@@ -122,14 +122,15 @@
 
     .arrow {
       position: absolute;
-      top: -30px;
+      top: -40px;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) rotate(180deg);
       width: 0;
       height: 0;
       border-left: 15px solid transparent;
       border-right: 15px solid transparent;
-      border-bottom: 30px solid white;
+      border-top: 30px solid white;
+      box-shadow: 0 0 0 2px black;
       z-index: 10;
     }
 
